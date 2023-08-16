@@ -2,8 +2,9 @@ import { ICourse } from '@/interfaces/course'
 
 export const data: ICourse[] = [
   {
-    id: 'nome-curso',
-    name: 'Nome Curso',
+    id: 1,
+    slug: 'nome-curso',
+    name: 'Economia Básica',
     banner: 'url',
     about: 'Lorem ipsum...',
     lessons: 27,

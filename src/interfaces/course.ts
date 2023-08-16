@@ -1,5 +1,6 @@
 export interface ICourse {
-  id: string
+  id: number
+  slug: string
   name: string
   banner: string
   about: string

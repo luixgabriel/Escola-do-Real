@@ -8,7 +8,7 @@ import './globals.css'
 const monserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Escola do Real - Início',
+  title: 'Início - Escola do Real',
   description:
     'Uma ONG voltada para a educação financeira de todos os brasileiros.',
 }
