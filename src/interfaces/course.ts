@@ -6,4 +6,6 @@ export interface ICourse {
   about: string
   lessons: number
   duration: number
+  professors: number[]
+  modules: number[]
 }
