@@ -47,12 +47,11 @@ export default async function Curso({ params }: { params: { slug: string } }) {
           Cuso de {course.name}
         </h1>
         <p className="flex font-medium text-gray-600">
-          <span className="mr-3 flex items-center gap-1">
+          <span className="mr-4 flex items-center gap-1">
             <VideoIcon />
             {course.lessons} Aulas
           </span>
-          &#x2022;
-          <span className="ml-2 flex items-center gap-1">
+          <span className="flex items-center gap-1">
             <ClockIcon />
             {timeMask(course.duration)}
           </span>
