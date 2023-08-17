@@ -3,4 +3,5 @@ export interface IModule {
   title: string
   description: string
   duration: number
+  lessons: number[]
 }

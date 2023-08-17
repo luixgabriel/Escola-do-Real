@@ -1,3 +1,5 @@
+import { ClockIcon, VideoIcon } from '@/components/Icons'
+import SectionTitle from '@/components/SectionTitle'
 import { ICourse } from '@/interfaces/course'
 import api from '@/server/api'
 import { timeMask } from '@/utils/time-mask'
@@ -28,43 +30,6 @@ export async function generateMetadata({
   }
 }
 
-function VideoIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      className="h-6 w-6"
-    >
-      <path
-        stroke-linecap="round"
-        d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
-      />
-    </svg>
-  )
-}
-
-function ClockIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      className="h-6 w-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-      />
-    </svg>
-  )
-}
-
 export default async function Curso({ params }: { params: { slug: string } }) {
   const course: ICourse = await getCourseBySlug(params.slug)
 
@@ -77,16 +42,17 @@ export default async function Curso({ params }: { params: { slug: string } }) {
         width={1440}
         height={360}
       />
-      <section className="px-20">
+      <section className="px-32">
         <h1 className="pb-2 text-3xl font-semibold text-blue-700">
           Cuso de {course.name}
         </h1>
         <p className="flex font-medium text-gray-600">
-          <span className="mr-4 flex items-center gap-1">
+          <span className="mr-3 flex items-center gap-1">
             <VideoIcon />
             {course.lessons} Aulas
           </span>
-          <span className="flex items-center gap-1">
+          &#x2022;
+          <span className="ml-2 flex items-center gap-1">
             <ClockIcon />
             {timeMask(course.duration)}
           </span>
@@ -96,18 +62,19 @@ export default async function Curso({ params }: { params: { slug: string } }) {
         </p>
       </section>
 
-      {/* TODO: Desenvolver o sistema de módulos e aulas */}
-      <section className="px-20 py-10">
-        {course.modules.map((moduleId) => (
-          <Module key={moduleId} id={moduleId} />
+      <main className="px-32 py-10">
+        {course.modules.map((moduleId, index) => (
+          <Module key={moduleId} id={moduleId} position={index + 1} />
         ))}
-      </section>
+      </main>
 
-      {/* TODO: Adicionar o cabeçalho dos professores */}
-      <section className="mb-10 grid grid-cols-4 gap-6 px-36">
-        {course.professors.map((professorId) => (
-          <Professor key={professorId} id={professorId} />
-        ))}
+      <section className="mb-24 mt-16 px-72">
+        <SectionTitle>Nossos Professores</SectionTitle>
+        <div className="grid grid-cols-4 gap-6">
+          {course.professors.map((professorId) => (
+            <Professor key={professorId} id={professorId} />
+          ))}
+        </div>
       </section>
     </main>
   )

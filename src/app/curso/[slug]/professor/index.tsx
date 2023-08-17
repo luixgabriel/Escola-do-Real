@@ -18,7 +18,7 @@ export default async function Professor({ id }: { id: number }) {
   return (
     <div className="mt-6 flex flex-col items-center">
       <Image
-        className="mb-3 w-2/5"
+        className="mb-3 w-5/12"
         src={professor?.image || ''}
         alt={`Foto de ${professor?.name}`}
         width={143}

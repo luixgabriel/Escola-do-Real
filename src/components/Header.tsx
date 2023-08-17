@@ -10,6 +10,7 @@ export default function Header() {
           width={188}
           height={68}
           alt="Logo da escola do real"
+          priority
         />
       </a>
       <div className="flex gap-4">
