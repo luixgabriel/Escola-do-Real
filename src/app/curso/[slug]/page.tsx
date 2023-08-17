@@ -77,7 +77,7 @@ export default async function Curso({ params }: { params: { slug: string } }) {
         width={1440}
         height={360}
       />
-      <section className="px-20">
+      <section className="margin_main">
         <h1 className="pb-2 text-3xl font-semibold text-blue-700">
           Cuso de {course.name}
         </h1>
