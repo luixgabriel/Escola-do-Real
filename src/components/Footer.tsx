@@ -32,7 +32,7 @@ export default function Footer() {
           className="underline"
           rel="external"
           target="_blank"
-          href="https://www.linkedin.com/company/juniors-developers-group/mycompany/"
+          href="https://jdg-webpage.vercel.app"
         >
           Juniors Developers Group.
         </a>
