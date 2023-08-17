@@ -26,7 +26,7 @@ export default function Footer() {
       <small className="flex justify-center text-base leading-10 text-white">
         &copy; 2023 - Escola do Real - Todos os direitos reservados
       </small>
-      <span className="flex justify-center text-xs text-white ">
+      <span className=" flex items-center justify-center text-xs text-white">
         <span className="mr-1 ">Desenvolvido por </span>
         <a
           className="underline"
@@ -36,7 +36,13 @@ export default function Footer() {
         >
           Juniors Developers Group.
         </a>
-        {/* <Image src="#" alt="Logo Juniors Developers Group." height={29} width={29} /> */}
+        <Image
+          className="mx-3"
+          src="/JDG.png"
+          alt="Logo Juniors Developers Group."
+          height={29}
+          width={29}
+        />
       </span>
     </footer>
   )
