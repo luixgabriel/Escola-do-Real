@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-around bg-zinc-100">
+    <header className="flex items-center justify-between bg-zinc-100 px-[10%]">
       <a href="/">
         <Image
           className="m-8"

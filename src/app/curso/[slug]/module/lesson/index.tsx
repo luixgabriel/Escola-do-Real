@@ -29,7 +29,7 @@ export default async function Lesson({
       <Link className="flex gap-5" href={`${lesson?.url}`} target="_blank">
         {/* TODO: Adicionar a máscara do ícone de play */}
         <Image
-          className="h-full w-56 rounded-md"
+          className="hidden h-full w-56 rounded-md md:block"
           src={`${lesson?.thumb}`}
           alt="Thumb da aula"
           width={336}

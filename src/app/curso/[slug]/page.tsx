@@ -42,7 +42,7 @@ export default async function Curso({ params }: { params: { slug: string } }) {
         width={1440}
         height={360}
       />
-      <section className="px-32">
+      <section className="px-[10%]">
         <h1 className="pb-2 text-3xl font-semibold text-blue-700">
           Cuso de {course.name}
         </h1>
@@ -62,15 +62,15 @@ export default async function Curso({ params }: { params: { slug: string } }) {
         </p>
       </section>
 
-      <main className="px-32 py-10">
+      <main className="px-[10%] py-10">
         {course.modules.map((moduleId, index) => (
           <Module key={moduleId} id={moduleId} position={index + 1} />
         ))}
       </main>
 
-      <section className="mb-24 mt-16 px-72">
+      <section className="mb-24 mt-16 px-[20%]">
         <SectionTitle>Nossos Professores</SectionTitle>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-4">
           {course.professors.map((professorId) => (
             <Professor key={professorId} id={professorId} />
           ))}
