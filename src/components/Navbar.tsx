@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export default function Navbar() {
   return (
-    <nav className="margin_main flex justify-between border-b-2 border-green-500 py-7 text-xs font-bold ">
-      <ul>
+    <nav className="custom-mx-global pb-6 text-base font-bold">
+      <ul className="flex justify-between border-b-2 border-green-500 py-6">
         <li>
           <a href="#" target="_top" className="flex items-center gap-2">
             <Image
@@ -15,8 +15,6 @@ export default function Navbar() {
             <span>Conheça a Escola do Real</span>
           </a>
         </li>
-      </ul>
-      <ul>
         <li className="flex">
           <a
             href="#onde_atuamos"
@@ -32,8 +30,6 @@ export default function Navbar() {
             <span>Onde Atuamos</span>
           </a>
         </li>
-      </ul>
-      <ul>
         <li className="flex">
           <a
             href="#nosso_curso"
@@ -49,8 +45,6 @@ export default function Navbar() {
             <span>Nosso curso</span>
           </a>
         </li>
-      </ul>
-      <ul>
         <li className="flex">
           <a
             href="#fale_conosco"

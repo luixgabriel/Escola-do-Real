@@ -3,15 +3,9 @@
 @tailwind utilities;
 
 @layer utilities{
-  .margin_main{
-    margin: 0 11rem;
+  .custom-mx-global{
+    @apply mx-[10%]
   }
-  @media (max-width: 1000px){
-    .margin_main{
-      margin: 0 5rem;
-    }
-  }
-  
   }
  
     

@@ -42,16 +42,17 @@ export default async function Curso({ params }: { params: { slug: string } }) {
         width={1440}
         height={360}
       />
-      <section className="px-[10%]">
+      <section className="custom-mx-global">
         <h1 className="pb-2 text-3xl font-semibold text-blue-700">
           Cuso de {course.name}
         </h1>
         <p className="flex font-medium text-gray-600">
-          <span className="mr-4 flex items-center gap-1">
+          <span className="mr-3 flex items-center gap-1">
             <VideoIcon />
             {course.lessons} Aulas
           </span>
-          <span className="flex items-center gap-1">
+          &#x2022;
+          <span className="ml-2 flex items-center gap-1">
             <ClockIcon />
             {timeMask(course.duration)}
           </span>
@@ -61,7 +62,7 @@ export default async function Curso({ params }: { params: { slug: string } }) {
         </p>
       </section>
 
-      <main className="px-[10%] py-10">
+      <main className="custom-mx-global py-10">
         {course.modules.map((moduleId, index) => (
           <Module key={moduleId} id={moduleId} position={index + 1} />
         ))}
