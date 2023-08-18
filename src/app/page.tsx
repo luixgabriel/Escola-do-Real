@@ -1,11 +1,13 @@
+import Banner from '@/components/Banner'
+import FaleConosco from '@/components/FaleConosco'
 import Navbar from '@/components/Navbar'
-import Banner from '@/components/banner'
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Banner />
+      <FaleConosco />
     </>
   )
 }
