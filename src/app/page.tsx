@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar'
+import SectionLocation from '@/components/SectionLocation'
 import Banner from '@/components/banner'
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Navbar />
       <Banner />
+      <SectionLocation />
     </>
   )
 }
