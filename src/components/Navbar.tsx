@@ -1,65 +1,51 @@
 import Image from 'next/image'
+import Link from 'next/link'
+
+const data = [
+  {
+    href: '#escola-do-real',
+    icon: '/icons/globe.svg',
+    text: 'Conheça a Escola do Real',
+  },
+  {
+    href: '#onde-atuamos',
+    icon: '/icons/location.svg',
+    text: 'Onde Atuamos',
+  },
+  {
+    href: '#nosso-curso',
+    icon: '/icons/hands.svg',
+    text: 'Nosso curso',
+  },
+  {
+    href: '#fale-conosco',
+    icon: '/icons/talk.svg',
+    text: 'Fale conosco',
+  },
+]
 
 export default function Navbar() {
   return (
     <nav className="custom-mx-global pb-6 text-base font-bold">
       <ul className="flex justify-between border-b-2 border-green-500 py-6">
-        <li>
-          <a href="#" target="_top" className="flex items-center gap-2">
-            <Image
-              src="/icons/globe.svg"
-              height={35}
-              width={35}
-              alt="globe icon"
-            />
-            <span>Conheça a Escola do Real</span>
-          </a>
-        </li>
-        <li className="flex">
-          <a
-            href="#onde_atuamos"
-            target="_parent"
-            className="flex items-center gap-2"
-          >
-            <Image
-              src="/icons/location.svg"
-              height={35}
-              width={25.65}
-              alt="location icon"
-            />
-            <span>Onde Atuamos</span>
-          </a>
-        </li>
-        <li className="flex">
-          <a
-            href="#nosso_curso"
-            target="_parent"
-            className="flex items-center gap-2"
-          >
-            <Image
-              src="/icons/hands.svg"
-              height={35}
-              width={35}
-              alt="hands icon"
-            />
-            <span>Nosso curso</span>
-          </a>
-        </li>
-        <li className="flex">
-          <a
-            href="#fale_conosco"
-            target="_parent"
-            className="flex items-center gap-2"
-          >
-            <Image
-              src="/icons/talk.svg"
-              height={35}
-              width={35}
-              alt="talk icon"
-            />
-            <span>Fale conosco</span>
-          </a>
-        </li>
+        {data.map((item) => (
+          <li key={item.href}>
+            <Link
+              href={item.href}
+              target="_parent"
+              className="flex h-full items-center gap-2"
+            >
+              <Image
+                className="max-h-8"
+                src={item.icon}
+                height={35}
+                width={35}
+                alt="globe icon"
+              />
+              <span className="text-blue-500">{item.text}</span>
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   )

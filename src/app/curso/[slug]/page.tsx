@@ -34,14 +34,18 @@ export default async function Curso({ params }: { params: { slug: string } }) {
   const course: ICourse = await getCourseBySlug(params.slug)
 
   return (
-    <main>
-      <Image
-        className="mb-10 w-full"
-        src={course.banner}
-        alt="Banner do curso"
-        width={1440}
-        height={360}
-      />
+    <>
+      <div>
+        <Image
+          className="mb-10 w-full"
+          src={course.banner}
+          alt="Banner do curso"
+          width={1440}
+          height={360}
+          loading="eager"
+        />
+      </div>
+
       <section className="custom-mx-global">
         <h1 className="pb-2 text-3xl font-semibold text-blue-700">
           Cuso de {course.name}
@@ -69,13 +73,13 @@ export default async function Curso({ params }: { params: { slug: string } }) {
       </main>
 
       <section className="mb-24 mt-16 px-[20%]">
-        <SectionTitle>Nossos Professores</SectionTitle>
+        <SectionTitle icon="/icons/hands.svg">Nossos Professores</SectionTitle>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-4">
           {course.professors.map((professorId) => (
             <Professor key={professorId} id={professorId} />
           ))}
         </div>
       </section>
-    </main>
+    </>
   )
 }
