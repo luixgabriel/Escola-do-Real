@@ -6,21 +6,25 @@ const data = [
     href: '#escola-do-real',
     icon: '/icons/globe.svg',
     text: 'Conheça a Escola do Real',
+    alt: 'icon globe',
   },
   {
     href: '#onde-atuamos',
     icon: '/icons/location.svg',
     text: 'Onde Atuamos',
+    alt: 'icon location',
   },
   {
     href: '#nosso-curso',
     icon: '/icons/hands.svg',
     text: 'Nosso curso',
+    alt: 'icon hands',
   },
   {
     href: '#fale-conosco',
     icon: '/icons/talk.svg',
     text: 'Fale conosco',
+    alt: 'icon talk',
   },
 ]
 
@@ -40,7 +44,7 @@ export default function Navbar() {
                 src={item.icon}
                 height={35}
                 width={35}
-                alt="globe icon"
+                alt={item.alt}
               />
               <span className="text-blue-500">{item.text}</span>
             </Link>
