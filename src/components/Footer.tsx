@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className=" bg-gradient-to-r from-green-500 to-blue-500 pb-7 pt-16">
+    <footer className="bg-gradient-to-r from-green-500 to-blue-500 pb-7 pt-16">
       <div className="flex justify-center gap-4">
         <Image
           width={29}
