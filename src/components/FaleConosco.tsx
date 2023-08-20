@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import ButtonCTA from './ButtonCTA'
 import SectionTitle from './SectionTitle'
 
@@ -6,13 +5,10 @@ export default function FaleConosco() {
   return (
     <section id="fale-conosco" className="my-20">
       <SectionTitle icon="/icons/talk.svg">Fale Conosco</SectionTitle>
-      <Image
-        className="w-full"
-        src={'/images/banners/headphone.png'}
-        alt="Banner da seção Fale Conosco"
-        width={1440}
-        height={240}
-      />
+      <h3 className="bg-talk-backgroud h-60 w-full bg-cover bg-center py-16 text-center text-2xl font-bold text-white md:text-3xl">
+        Se você tem alguma dúvida ou precisa de informações específicas, fique à
+        vontade para perguntar.
+      </h3>
       <form className="relative mx-auto -mt-20 grid w-3/5 grid-cols-2 gap-4 rounded-lg bg-white p-6 shadow-lg">
         <label className="flex flex-col gap-2" htmlFor="name">
           Nome
