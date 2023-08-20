@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'people-backgroud': "url('/images/banners/people.png')",
+        'talk-backgroud': "url('/images/banners/headphone.png')",
+      },
       colors: {
         blue: {
           50: '#e7e7ee',
