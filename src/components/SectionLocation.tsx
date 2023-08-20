@@ -30,7 +30,7 @@ const data = [
 
 export default function SectionLocation() {
   return (
-    <section className="mt-10 ">
+    <section className="mt-10 " id='onde-atuamos'>
       <SectionTitle icon="/icons/location.svg">Onde Atuamos</SectionTitle>
       <h3 className="bg-people-backgroud h-60 w-full bg-cover bg-center py-16 text-center text-3xl font-bold text-white md:text-4xl">
         Capacitação de Pessoas para um Futuro <br /> Financeiramente

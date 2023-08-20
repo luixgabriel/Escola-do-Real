@@ -2,7 +2,10 @@ import Link from 'next/link'
 
 export default function Banner() {
   return (
-    <main className="flex flex-col items-center justify-center bg-[url('/images/banners/main.png')] bg-cover bg-bottom py-32">
+    <main
+      id="escola-do-real"
+      className="flex flex-col items-center justify-center bg-[url('/images/banners/main.png')] bg-cover bg-bottom py-32"
+    >
       <h1 className="mb-10 text-center text-6xl font-bold text-white">
         Escola do Real
       </h1>
