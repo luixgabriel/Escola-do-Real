@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
 @layer utilities{
   .custom-mx-global{
     @apply mx-[10%]
+  }
+  .custom-pt-iframe{
+    padding-top: 45%;
   }
   }
  
