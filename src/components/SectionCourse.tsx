@@ -4,13 +4,13 @@ import SectionTitle from './SectionTitle'
 
 export default function SectionCourse() {
   return (
-    <section id="nosso-curso">
+    <section id="nosso-curso" className="custom-py-section">
       <SectionTitle icon="/icons/study.svg">Nosso Curso</SectionTitle>
       <p className="mb-5 text-center">
         Apresentação do nosso projeto e como funciona o projeto social de
         educação financeira.
       </p>
-      <section className="custom-mx-global custom-pt-iframe relative mb-7 flex w-4/5 justify-center ">
+      <div className="custom-mx-global custom-pt-iframe relative mb-7 flex w-4/5 justify-center ">
         <iframe
           className="absolute top-0 h-full w-full"
           width="1030"
@@ -20,7 +20,7 @@ export default function SectionCourse() {
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-      </section>
+      </div>
       <Link href="/curso/economia-basica" className=" uppercase">
         <ButtonCTA>iniciar curso</ButtonCTA>
       </Link>

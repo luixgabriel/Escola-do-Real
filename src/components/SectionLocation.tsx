@@ -30,13 +30,13 @@ const data = [
 
 export default function SectionLocation() {
   return (
-    <section className="mt-10 " id='onde-atuamos'>
+    <section className="custom-py-section" id="onde-atuamos">
       <SectionTitle icon="/icons/location.svg">Onde Atuamos</SectionTitle>
-      <h3 className="bg-people-backgroud h-60 w-full bg-cover bg-center py-16 text-center text-3xl font-bold text-white md:text-4xl">
+      <h3 className="h-60 w-full bg-people-backgroud bg-cover bg-center py-16 text-center text-3xl font-bold text-white">
         Capacitação de Pessoas para um Futuro <br /> Financeiramente
         Sustentável!
       </h3>
-      <section className="custom-mx-global  -mt-12 grid grid-cols-1 place-items-center gap-4 md:grid-cols-2 lg:grid-cols-4 ">
+      <section className="mx-[13%] -mt-12 grid grid-cols-1 place-items-center gap-4 md:grid-cols-2 lg:grid-cols-4 ">
         {data.map((item) => (
           <SectionCard key={item.src} item={item} />
         ))}

@@ -5,12 +5,16 @@
 html{
   scroll-behavior: smooth;
 }
+
 @layer utilities{
   .custom-mx-global{
     @apply mx-[10%]
   }
+  .custom-py-section {
+    @apply pt-14 pb-6
+  }
   .custom-pt-iframe{
-    padding-top: 45%;
+    @apply pt-[45%]
   }
   }
  

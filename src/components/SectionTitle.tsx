@@ -11,7 +11,7 @@ export default function SectionTitle({
     <div className="mb-6 flex flex-col items-center">
       {icon && (
         <Image
-          className="mb-3 w-12"
+          className="mb-3 w-10"
           src={icon}
           alt="Icone da seção"
           width={32}

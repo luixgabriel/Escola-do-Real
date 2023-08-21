@@ -1,8 +1,8 @@
 import Banner from '@/components/Banner'
-import FaleConosco from '@/components/FaleConosco'
 import Navbar from '@/components/Navbar'
+import SectionCourse from '@/components/SectionCourse'
 import SectionLocation from '@/components/SectionLocation'
-import SectionCourse from '@/components/SectionSourse'
+import SectionTalk from '@/components/SectionTalk'
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Banner />
       <SectionLocation />
       <SectionCourse />
-      <FaleConosco />
+      <SectionTalk />
     </>
   )
 }
