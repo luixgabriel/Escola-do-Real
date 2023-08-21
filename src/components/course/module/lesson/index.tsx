@@ -27,9 +27,8 @@ export default async function Lesson({
   return (
     <div className="min-h-32 mb-4 cursor-pointer rounded-md border border-white p-3 hover:border-gray-100 hover:bg-slate-50 hover:shadow-md">
       <Link className="flex gap-5" href={`${lesson?.url}`} target="_blank">
-        {/* TODO: Adicionar a máscara do ícone de play */}
         <Image
-          className="hidden h-full w-56 rounded-md md:block"
+          className="hidden h-full w-36 rounded-md md:block"
           src={`${lesson?.thumb}`}
           alt="Thumb da aula"
           width={336}

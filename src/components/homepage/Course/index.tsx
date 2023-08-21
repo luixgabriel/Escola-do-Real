@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import ButtonCTA from './ButtonCTA'
-import SectionTitle from './SectionTitle'
+import Title from '../../general/Title'
+import Button from '../Button'
 
-export default function SectionCourse() {
+export default function Course() {
   return (
     <section id="nosso-curso" className="custom-py-section">
-      <SectionTitle icon="/icons/study.svg">Nosso Curso</SectionTitle>
+      <Title icon="/icons/study.svg">Nosso Curso</Title>
       <p className="mb-5 text-center">
         Apresentação do nosso projeto e como funciona o projeto social de
         educação financeira.
@@ -22,7 +22,7 @@ export default function SectionCourse() {
         ></iframe>
       </div>
       <Link href="/curso/economia-basica" className=" uppercase">
-        <ButtonCTA>iniciar curso</ButtonCTA>
+        <Button>iniciar curso</Button>
       </Link>
     </section>
   )

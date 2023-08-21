@@ -1,17 +1,17 @@
-import Banner from '@/components/Banner'
-import Navbar from '@/components/Navbar'
-import SectionCourse from '@/components/SectionCourse'
-import SectionLocation from '@/components/SectionLocation'
-import SectionTalk from '@/components/SectionTalk'
+import Banner from '@/components/homepage/Banner'
+import Course from '@/components/homepage/Course'
+import Location from '@/components/homepage/Location'
+import Message from '@/components/homepage/Message'
+import Navbar from '@/components/homepage/Navbar'
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Banner />
-      <SectionLocation />
-      <SectionCourse />
-      <SectionTalk />
+      <Location />
+      <Course />
+      <Message />
     </>
   )
 }

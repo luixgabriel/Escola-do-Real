@@ -1,5 +1,5 @@
-import SectionCard from './SectionCard'
-import SectionTitle from './SectionTitle'
+import Title from '../../general/Title'
+import Card from './Card'
 
 const data = [
   {
@@ -28,17 +28,17 @@ const data = [
   },
 ]
 
-export default function SectionLocation() {
+export default function Location() {
   return (
     <section className="custom-py-section" id="onde-atuamos">
-      <SectionTitle icon="/icons/location.svg">Onde Atuamos</SectionTitle>
+      <Title icon="/icons/location.svg">Onde Atuamos</Title>
       <h3 className="h-60 w-full bg-people-backgroud bg-cover bg-center py-16 text-center text-3xl font-bold text-white">
         Capacitação de Pessoas para um Futuro <br /> Financeiramente
         Sustentável!
       </h3>
       <section className="mx-[13%] -mt-12 grid grid-cols-1 place-items-center gap-4 md:grid-cols-2 lg:grid-cols-4 ">
         {data.map((item) => (
-          <SectionCard key={item.src} item={item} />
+          <Card key={item.src} item={item} />
         ))}
       </section>
     </section>

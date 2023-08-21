@@ -1,12 +1,12 @@
-import { ClockIcon, VideoIcon } from '@/components/Icons'
-import SectionTitle from '@/components/SectionTitle'
+import Module from '@/components/course/module'
+import Professor from '@/components/course/professor'
+import { ClockIcon, VideoIcon } from '@/components/general/Icons'
+import Title from '@/components/general/Title'
 import { ICourse } from '@/interfaces/course'
 import api from '@/server/api'
 import { timeMask } from '@/utils/time-mask'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import Module from './module'
-import Professor from './professor'
 
 async function getCourseBySlug(slug: string) {
   try {
@@ -73,7 +73,7 @@ export default async function Curso({ params }: { params: { slug: string } }) {
       </main>
 
       <section className="mb-24 mt-16 px-[20%]">
-        <SectionTitle icon="/icons/hands.svg">Nossos Professores</SectionTitle>
+        <Title icon="/icons/hands.svg">Nossos Professores</Title>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-4">
           {course.professors.map((professorId) => (
             <Professor key={professorId} id={professorId} />

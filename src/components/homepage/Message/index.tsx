@@ -1,10 +1,10 @@
 'use client'
 
 import { ChangeEvent, FormEvent, useState } from 'react'
-import ButtonCTA from './ButtonCTA'
-import SectionTitle from './SectionTitle'
+import Title from '../../general/Title'
+import Button from '../Button'
 
-export default function SectionTalk() {
+export default function Message() {
   const [state, setState] = useState({
     name: '',
     email: '',
@@ -29,7 +29,7 @@ export default function SectionTalk() {
       className="custom-py-section"
       onSubmit={handleSubmit}
     >
-      <SectionTitle icon="/icons/talk.svg">Fale Conosco</SectionTitle>
+      <Title icon="/icons/talk.svg">Fale Conosco</Title>
       <h3 className="h-60 w-full bg-talk-backgroud bg-cover bg-center px-36 py-12 pb-16 text-center text-3xl font-bold text-white">
         Se você tem alguma dúvida ou precisa de informações específicas, fique à
         vontade para perguntar.
@@ -88,7 +88,7 @@ export default function SectionTalk() {
           ></textarea>
         </label>
         <div className="col-span-2 my-3">
-          <ButtonCTA>Enviar Mensagem!</ButtonCTA>
+          <Button>Enviar Mensagem!</Button>
         </div>
       </form>
     </section>

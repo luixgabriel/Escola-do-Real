@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-export default function SectionCard({
+export default function Card({
   item,
 }: {
   item: {
