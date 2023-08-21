@@ -21,7 +21,7 @@ export default function Course() {
           allowFullScreen
         ></iframe>
       </div>
-      <Link href="/curso/economia-basica" className=" uppercase">
+      <Link href="/curso/economia-basica">
         <Button>Iniciar Curso</Button>
       </Link>
     </section>
