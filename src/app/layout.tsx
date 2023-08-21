@@ -1,5 +1,6 @@
 import Footer from '@/components/general/Footer'
 import Header from '@/components/general/Header'
+import ScrollTop from '@/components/general/ScrollTop'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         {children}
         <Footer />
+        <ScrollTop />
       </body>
     </html>
   )

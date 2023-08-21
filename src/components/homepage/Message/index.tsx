@@ -12,7 +12,7 @@ export default function Message() {
     message: '',
   })
 
-  const handleState = (
+  const handleChange = (
     e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
   ) => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -40,7 +40,7 @@ export default function Message() {
           <input
             className="rounded-sm bg-slate-100 p-2"
             value={state.name}
-            onChange={handleState}
+            onChange={handleChange}
             type="text"
             name="name"
             id="name"
@@ -53,7 +53,7 @@ export default function Message() {
           <input
             className="rounded-sm bg-slate-100 p-2"
             value={state.email}
-            onChange={handleState}
+            onChange={handleChange}
             type="email"
             name="email"
             id="email"
@@ -66,7 +66,7 @@ export default function Message() {
           <input
             className="rounded-sm bg-slate-100 p-2"
             value={state.title}
-            onChange={handleState}
+            onChange={handleChange}
             id="title"
             name="title"
             type="text"
@@ -79,7 +79,7 @@ export default function Message() {
           <textarea
             className="rounded-sm bg-slate-100 p-2"
             value={state.message}
-            onChange={handleState}
+            onChange={handleChange}
             name="message"
             id="message"
             cols={30}

@@ -22,7 +22,7 @@ export default function Course() {
         ></iframe>
       </div>
       <Link href="/curso/economia-basica" className=" uppercase">
-        <Button>iniciar curso</Button>
+        <Button>Iniciar Curso</Button>
       </Link>
     </section>
   )
