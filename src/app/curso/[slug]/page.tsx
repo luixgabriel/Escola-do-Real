@@ -3,6 +3,7 @@ import Professor from '@/components/course/professor'
 import { ClockIcon, VideoIcon } from '@/components/general/Icons'
 import Title from '@/components/general/Title'
 import { ICourse } from '@/interfaces/course'
+import { Course as CourseModel } from '@/model/Course'
 import api from '@/server/api'
 import { timeMask } from '@/utils/time-mask'
 import Image from 'next/image'
@@ -30,9 +31,8 @@ export async function generateMetadata({
   }
 }
 
-export default async function Curso({ params }: { params: { slug: string } }) {
-  const course: ICourse = await getCourseBySlug(params.slug)
-
+export default async function Course({ params }: { params: { slug: string } }) {
+  const course: CourseModel = await getCourseBySlug(params.slug)
   return (
     <>
       <div>
@@ -67,16 +67,16 @@ export default async function Curso({ params }: { params: { slug: string } }) {
       </section>
 
       <main className="custom-mx-global py-10">
-        {course.modules.map((moduleId, index) => (
-          <Module key={moduleId} id={moduleId} position={index + 1} />
+        {course.modules.map((module, index) => (
+          <Module key={module.id} module={module} position={index + 1} />
         ))}
       </main>
 
       <section className="mb-24 mt-16 px-[20%]">
         <Title icon="/icons/hands.svg">Nossos Professores</Title>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-4">
-          {course.professors.map((professorId) => (
-            <Professor key={professorId} id={professorId} />
+          {course.professors.map((professor) => (
+            <Professor key={professor.id} professor={professor} />
           ))}
         </div>
       </section>

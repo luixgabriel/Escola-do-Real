@@ -1,29 +1,15 @@
 import { ILesson } from '@/interfaces/lesson'
-import api from '@/server/api'
 import { timeMask } from '@/utils/time-mask'
 import Image from 'next/image'
 import Link from 'next/link'
 
-async function getLessons() {
-  try {
-    const response = await api.get('/aulas')
-    const { data } = await response.data
-    return data
-  } catch (error) {
-    console.log(error)
-  }
-}
-
-export default async function Lesson({
-  id,
+export default function Lesson({
+  lesson,
   position,
 }: {
-  id: number
+  lesson: ILesson
   position: number
 }) {
-  const lessons: ILesson[] = await getLessons()
-  const lesson = lessons.find((lesson) => lesson.id === id)
-
   return (
     <div className="min-h-32 mb-4 cursor-pointer rounded-md border border-white p-3 hover:border-gray-100 hover:bg-slate-50 hover:shadow-md">
       <Link className="flex gap-5" href={`${lesson?.url}`} target="_blank">

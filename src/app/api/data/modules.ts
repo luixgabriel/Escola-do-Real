@@ -1,6 +1,6 @@
 import { IModule } from '@/interfaces/module'
 
-export const data: IModule[] = [
+export const modules: IModule[] = [
   {
     id: 1,
     title: 'O Que é Economia',

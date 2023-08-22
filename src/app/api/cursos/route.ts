@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
-import { data } from './data'
+import { Course } from '../../../model/Course'
+import { courses } from '../data/courses'
 
 export async function GET() {
-  return NextResponse.json({ data }, { status: 200 })
+  const listCourses = courses.map((course) => new Course(course))
+  return NextResponse.json({ data: listCourses }, { status: 200 })
 }

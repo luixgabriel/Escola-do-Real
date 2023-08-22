@@ -1,6 +1,6 @@
 import { ILesson } from '@/interfaces/lesson'
 
-export const data: ILesson[] = [
+export const lessons: ILesson[] = [
   {
     id: 1,
     thumb: '/images/lesson/1-lesson.jpg',

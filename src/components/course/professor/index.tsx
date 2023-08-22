@@ -1,31 +1,18 @@
 import { IProfessor } from '@/interfaces/professor'
-import api from '@/server/api'
 import Image from 'next/image'
 
-async function getProfessor() {
-  try {
-    const response = await api.get(`/professores`)
-    const { data } = await response.data
-    return data
-  } catch (err) {
-    console.log(err)
-  }
-}
-
-export default async function Professor({ id }: { id: number }) {
-  const professorList: IProfessor[] = await getProfessor()
-  const professor = professorList.find((professor) => professor.id === id)
+export default function Professor({ professor }: { professor: IProfessor }) {
   return (
     <div className="mt-6 flex flex-col items-center">
       <Image
         className="w-18 min-w-12 mb-3"
-        src={professor?.image || ''}
-        alt={`Foto de ${professor?.name}`}
+        src={professor.image || ''}
+        alt={`Foto de ${professor.name}`}
         width={143}
         height={143}
       />
-      <p className="mb-1 text-lg font-medium">{professor?.name}</p>
-      <span className="text-gray-600">{professor?.subject}</span>
+      <p className="mb-1 text-lg font-medium">{professor.name}</p>
+      <span className="text-gray-600">{professor.subject}</span>
     </div>
   )
 }

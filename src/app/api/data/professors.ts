@@ -1,6 +1,6 @@
 import { IProfessor } from '@/interfaces/professor'
 
-export const data: IProfessor[] = [
+export const professors: IProfessor[] = [
   {
     id: 1,
     image: '/images/professor/1-professor.png',

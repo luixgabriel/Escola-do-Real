@@ -4,8 +4,15 @@ import { ChangeEvent, FormEvent, useState } from 'react'
 import Title from '../../general/Title'
 import Button from '../Button'
 
+interface contactForm {
+  name: string
+  email: string
+  title: string
+  message: string
+}
+
 export default function Message() {
-  const [state, setState] = useState({
+  const [state, setState] = useState<contactForm>({
     name: '',
     email: '',
     title: '',
@@ -20,7 +27,12 @@ export default function Message() {
 
   const handleSubmit = (e: FormEvent<HTMLElement>) => {
     e.preventDefault()
-    console.log(state)
+    setState({
+      name: '',
+      email: '',
+      title: '',
+      message: '',
+    })
   }
 
   return (

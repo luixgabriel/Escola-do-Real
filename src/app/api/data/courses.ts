@@ -1,6 +1,6 @@
 import { ICourse } from '@/interfaces/course'
 
-export const data: ICourse[] = [
+export const courses: ICourse[] = [
   {
     id: 1,
     slug: 'economia-basica',
