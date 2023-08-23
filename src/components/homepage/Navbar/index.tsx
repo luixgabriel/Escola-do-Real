@@ -1,32 +1,32 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
 const data = [
   {
-    href: '#escola-do-real',
-    icon: '/icons/globe.svg',
-    text: 'Conheça a Escola do Real',
-    alt: 'icon globe',
+    href: "#escola-do-real",
+    icon: "/icons/globe.svg",
+    text: "Conheça a Escola do Real",
+    alt: "icon globe",
   },
   {
-    href: '#onde-atuamos',
-    icon: '/icons/location.svg',
-    text: 'Onde Atuamos',
-    alt: 'icon location',
+    href: "#onde-atuamos",
+    icon: "/icons/location.svg",
+    text: "Onde Atuamos",
+    alt: "icon location",
   },
   {
-    href: '#nosso-curso',
-    icon: '/icons/hands.svg',
-    text: 'Nosso curso',
-    alt: 'icon hands',
+    href: "#nosso-curso",
+    icon: "/icons/hands.svg",
+    text: "Nosso curso",
+    alt: "icon hands",
   },
   {
-    href: '#fale-conosco',
-    icon: '/icons/talk.svg',
-    text: 'Fale conosco',
-    alt: 'icon talk',
+    href: "#fale-conosco",
+    icon: "/icons/talk.svg",
+    text: "Fale conosco",
+    alt: "icon talk",
   },
-]
+];
 
 export default function Navbar() {
   return (
@@ -52,5 +52,5 @@ export default function Navbar() {
         ))}
       </ul>
     </nav>
-  )
+  );
 }
