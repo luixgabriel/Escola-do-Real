@@ -1,16 +1,36 @@
-import Title from '../../general/Title'
 import Image from 'next/image'
+import Title from '../../general/Title'
+
+const data = [
+  {
+    src: '/images/logo-partners/vital.png',
+    alt: 'Logo do Parceiro 1',
+  },
+  {
+    src: '/images/logo-partners/obecon.png',
+    alt: 'Logo do Parceiro 2',
+  },
+  {
+    src: '/images/logo-partners/celeritas.png',
+    alt: 'Logo do Parceiro 3',
+  },
+  {
+    src: '/images/logo-partners/olimpiadas.png',
+    alt: 'Logo do Parceiro 4',
+  },
+]
 
 export default function Partners() {
   return (
-    <section className='custom-py-section custom-mx-global'>
+    <section className="custom-py-section custom-mx-global">
       <Title icon="/icons/hands.svg">Nossos Parceiros</Title>
       <div>
-        <ul className='flex justify-between items-center gap-3 sm:flex-wrap'>
-          <li><Image src='/images/logo-partners/vital.png' width={200} height={130} /></li>
-          <li><Image src='/images/logo-partners/obecon.png' width={200} height={130} /></li>
-          <li><Image src='/images/logo-partners/celeritas.png' width={200} height={130} /></li>
-          <li><Image src='/images/logo-partners/olimpiadas.png' width={200} height={130} /></li>
+        <ul className="mt-12 flex items-center justify-between gap-3 sm:flex-wrap">
+          {data.map((item) => (
+            <li key={item.src}>
+              <Image src={item.src} alt={item.alt} width={150} height={100} />
+            </li>
+          ))}
         </ul>
       </div>
     </section>
