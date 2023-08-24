@@ -1,4 +1,6 @@
+import Button from '@/components/homepage/Button'
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -9,8 +11,28 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <>
-      <h1>404 - Not Found</h1>
-      <Link href={'/'}>Voltar para página inicial</Link>
+      <section className="custom-py-section mx-auto my-0 grid max-w-3xl grid-cols-1 items-center gap-5 md:grid-cols-2">
+        <div className="flex justify-center">
+          <Image
+            src="/images/not-found/404-erro.svg"
+            width={300}
+            height={300}
+            alt="Ilustração Error"
+          />
+        </div>
+
+        <div className="flex flex-col justify-center">
+          <h1 className="text-center text-5xl font-bold text-blue-500">
+            Erro 404
+          </h1>
+          <p className="m-4 text-center">
+            Desculpe! Não encontramos a página que você tentou acessar
+          </p>
+          <Link href="/">
+            <Button>Voltar</Button>
+          </Link>
+        </div>
+      </section>
     </>
   )
 }
