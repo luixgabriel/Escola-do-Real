@@ -11,7 +11,7 @@ export default function Module({
   position: number
 }) {
   return (
-    <div className="mb-6 rounded-xl border border-slate-100 px-10 py-6 shadow-md">
+    <div className="border-x border-t border-slate-400 px-10 py-6 first:rounded-t-lg last:rounded-b-lg last:border-b">
       <header className="mb-3 flex justify-between">
         <div className="flex items-center gap-3">
           <h2 className="text-lg font-semibold">
