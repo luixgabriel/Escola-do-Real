@@ -30,8 +30,8 @@ const data = [
 
 export default function Navbar() {
   return (
-    <nav className="custom-mx-global pb-6 text-base font-bold">
-      <ul className="flex justify-between border-b-2 border-green-500 py-6">
+    <nav className="custom-mx-global flex flex-col pb-6">
+      <ul className="flex flex-col items-center justify-center gap-6 border-b-2 border-green-500 py-6 text-base font-bold md:flex-row md:justify-between">
         {data.map((item) => (
           <li key={item.href}>
             <Link
@@ -51,6 +51,14 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+      <div className="mt-5 flex justify-between md:hidden">
+        <button className="rounded-md bg-blue-500 px-5 py-3 uppercase text-white hover:bg-blue-700">
+          Fazer Doação
+        </button>
+        <button className="rounded-md bg-green-500 px-5 py-3 uppercase text-white hover:bg-green-600">
+          Faça Parte
+        </button>
+      </div>
     </nav>
   )
 }
