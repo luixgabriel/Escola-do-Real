@@ -2,11 +2,14 @@
 
 import Navbar from '@/components/general/Header/Navbar'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Header() {
-  const [open, setOpen] = useState<boolean>(window.innerWidth > 768)
-  const handleClick = () => setOpen((prev) => !prev)
+  const [open, setOpen] = useState<boolean>(false)
+  useEffect(() => {
+    if (window.innerWidth > 768) setOpen(true)
+  }, [])
+  const handleClick = (): void => setOpen((prev) => !prev)
 
   return (
     <>
