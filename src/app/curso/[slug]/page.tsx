@@ -1,4 +1,4 @@
-import Module from '@/components/course/module'
+import Modules from '@/components/course/modules'
 import Professor from '@/components/course/professor'
 import { ClockIcon, VideoIcon } from '@/components/general/Icons'
 import Title from '@/components/general/Title'
@@ -65,11 +65,7 @@ export default async function Course({ params }: { params: { slug: string } }) {
         </p>
       </section>
 
-      <main className="custom-mx-global py-10">
-        {course.modules.map((module, index) => (
-          <Module key={module.id} module={module} position={index + 1} />
-        ))}
-      </main>
+      <Modules modules={course.modules} />
 
       <section className="mb-24 mt-16 px-[20%]">
         <Title icon="/icons/hands.svg">Nossos Professores</Title>

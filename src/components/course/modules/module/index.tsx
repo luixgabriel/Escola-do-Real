@@ -1,18 +1,23 @@
 'use client'
 
 import { DownIcon } from '@/components/general/Icons'
+import { ILesson } from '@/interfaces/lesson'
 import { Module as ModuleModel } from '@/model/Module'
 import { timeMask } from '@/utils/time-mask'
 import { useState } from 'react'
 import Lesson from './lesson'
 
+interface ModuleProps {
+  module: ModuleModel
+  position: number
+  handleSelection: (lesson: ILesson) => void
+}
+
 export default function Module({
   module,
   position,
-}: {
-  module: ModuleModel
-  position: number
-}) {
+  handleSelection,
+}: ModuleProps) {
   const [open, setOpen] = useState<boolean>(false)
   const handleClick = () => setOpen((prev) => !prev)
 
@@ -42,7 +47,12 @@ export default function Module({
       {open && (
         <div className="mt-6">
           {module.lessons.map((lesson, index) => (
-            <Lesson key={lesson.id} lesson={lesson} position={index + 1} />
+            <Lesson
+              key={lesson.id}
+              lesson={lesson}
+              position={index + 1}
+              handleSelection={handleSelection}
+            />
           ))}
         </div>
       )}
