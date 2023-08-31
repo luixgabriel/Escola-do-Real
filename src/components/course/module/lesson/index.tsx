@@ -11,11 +11,11 @@ export default function Lesson({
   position: number
 }) {
   return (
-    <div className="min-h-32 mb-4 cursor-pointer rounded-md border border-white p-3 hover:border-gray-100 hover:bg-slate-50 hover:shadow-md md:mx-6">
+    <div className="min-h-32 cursor-pointer border-t border-gray-200 px-10 py-6 hover:bg-gray-50">
       <Link className="flex gap-5" href={`${lesson?.url}`} target="_blank">
         <div className="relative">
           <Image
-            className="relative hidden h-full w-36 rounded-md brightness-75 filter md:block"
+            className="relative hidden h-full w-44 rounded-md brightness-75 filter md:block"
             src={`${lesson?.thumb}`}
             alt="Thumb da aula"
             width={336}

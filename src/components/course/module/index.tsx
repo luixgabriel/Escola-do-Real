@@ -1,6 +1,9 @@
+'use client'
+
 import { DownIcon } from '@/components/general/Icons'
 import { Module as ModuleModel } from '@/model/Module'
 import { timeMask } from '@/utils/time-mask'
+import { useState } from 'react'
 import Lesson from './lesson'
 
 export default function Module({
@@ -10,9 +13,17 @@ export default function Module({
   module: ModuleModel
   position: number
 }) {
+  const [open, setOpen] = useState<boolean>(false)
+  const handleClick = () => setOpen((prev) => !prev)
+
   return (
-    <div className="border-x border-t border-slate-400 pb-2 pt-6 first:rounded-t-lg last:rounded-b-lg last:border-b md:pb-6">
-      <div className="px-10">
+    <div
+      className={
+        'border-x border-t border-slate-400 pt-6 last:border-b hover:bg-gray-50 md:pb-6 ' +
+        (open && 'hover:bg-white md:pb-0')
+      }
+    >
+      <div className="cursor-pointer px-10" onClick={handleClick}>
         <header className="mb-3 flex justify-between">
           <div className="flex items-center gap-3">
             <h2 className="text-lg font-semibold">
@@ -22,15 +33,19 @@ export default function Module({
               {timeMask(module.duration || 0)}
             </span>
           </div>
-          <DownIcon />
+          <div className={open ? 'rotate-180' : 'rotate-0'}>
+            <DownIcon />
+          </div>
         </header>
-        <p className="mb-8 text-gray-600">{module.description}</p>
+        <p className="text-gray-600">{module.description}</p>
       </div>
-      <div>
-        {module.lessons.map((lesson, index) => (
-          <Lesson key={lesson.id} lesson={lesson} position={index + 1} />
-        ))}
-      </div>
+      {open && (
+        <div className="mt-6">
+          {module.lessons.map((lesson, index) => (
+            <Lesson key={lesson.id} lesson={lesson} position={index + 1} />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
