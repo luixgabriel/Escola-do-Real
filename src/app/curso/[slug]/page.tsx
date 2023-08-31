@@ -9,13 +9,10 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 async function getCourseBySlug(slug: string) {
-  try {
-    const response = await fetch(`${process.env.HYPERLINK}/api/cursos/${slug}`)
-    const { data } = await response.json()
-    return data
-  } catch {
-    notFound()
-  }
+  const response = await fetch(`${process.env.HYPERLINK}/api/cursos/${slug}`)
+  if (response.status !== 200) notFound()
+  const { data } = await response.json()
+  return data
 }
 
 export async function generateMetadata({
