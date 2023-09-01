@@ -16,7 +16,7 @@ export default function Modules({ modules }: ModulesProps) {
   const handleCloseSelection = () => setSelectedLesson(null)
 
   return (
-    <main className="custom-mx-global py-10">
+    <main className="md:custom-mx-global mx-6 py-10">
       {modules.map((module, index) => (
         <Module
           key={module.id}

@@ -35,7 +35,7 @@ export function ClockIcon() {
   )
 }
 
-export function DownIcon() {
+export function DownIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export function DownIcon() {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="h-6 w-6"
+      className={className}
     >
       <path
         strokeLinecap="round"
@@ -79,7 +79,7 @@ export function PlayIcon() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="absolute left-1/2 top-1/2 hidden h-12 w-12 -translate-x-1/2 -translate-y-1/2 text-white/60 md:block"
+      className="absolute left-1/2 top-1/2 h-20 w-20 -translate-x-1/2 -translate-y-1/2 text-white/60 md:h-12 md:w-12"
     >
       <path
         fillRule="evenodd"

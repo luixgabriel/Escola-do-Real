@@ -42,17 +42,17 @@ export default async function Course({ params }: { params: { slug: string } }) {
         />
       </div>
 
-      <section className="custom-mx-global">
+      <section className="md:custom-mx-global mx-6">
         <h1 className="pb-4 text-2xl font-semibold text-blue-700 md:pb-2 md:text-3xl">
           Cuso de {course.name}
         </h1>
-        <p className="flex font-medium text-gray-600">
-          <span className="mr-3 flex items-center gap-1">
+        <p className="flex flex-col gap-3 font-medium text-gray-600 md:flex-row">
+          <span className="flex items-center gap-1">
             <VideoIcon />
             {course.lessons} Aulas
           </span>
-          &#x2022;
-          <span className="ml-2 flex items-center gap-1">
+          <div className="hidden md:block">&#x2022;</div>
+          <span className="flex items-center gap-1">
             <ClockIcon />
             {timeMask(course.duration)}
           </span>

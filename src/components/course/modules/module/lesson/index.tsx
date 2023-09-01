@@ -5,23 +5,23 @@ import Image from 'next/image'
 
 interface LessonProps {
   lesson: ILesson
-  position: number
   handleSelection: (lesson: ILesson) => void
 }
 
-export default function Lesson({
-  lesson,
-  position,
-  handleSelection,
-}: LessonProps) {
+export default function Lesson({ lesson, handleSelection }: LessonProps) {
+  const handleSelectionMobile = (lesson: ILesson) => {
+    if (window.innerWidth > 768) handleSelection(lesson)
+    else window.open(`https://www.youtube.com/watch?v=${lesson.url}`)
+  }
+
   return (
     <div
-      className="min-h-32 flex cursor-pointer gap-5 border-t border-gray-200 px-10 py-6 hover:bg-gray-50"
-      onClick={() => handleSelection(lesson)}
+      className="min-h-32 flex cursor-pointer flex-col border-t border-gray-200 px-6 py-6 hover:bg-gray-50 md:flex-row md:gap-5 md:px-10"
+      onClick={() => handleSelectionMobile(lesson)}
     >
       <div className="relative">
         <Image
-          className="relative hidden h-full w-44 rounded-md brightness-75 filter md:block"
+          className="relative m-auto h-full w-full rounded-md brightness-75 filter md:m-0 md:block md:w-44"
           src={`${lesson?.thumb}`}
           alt="Thumb da aula"
           width={336}
@@ -31,8 +31,8 @@ export default function Lesson({
       </div>
       <div>
         <div className="flex items-center gap-3 pt-3">
-          <h3 className="text-lg font-medium">
-            {position}. {lesson?.title}
+          <h3 className="text-center text-lg font-medium md:text-left">
+            {lesson?.title}
           </h3>
           <span className="hidden text-gray-500 md:block">
             {timeMask(lesson?.duration || 0)}

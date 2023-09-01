@@ -3,6 +3,7 @@
 import { DownIcon } from '@/components/general/Icons'
 import { ILesson } from '@/interfaces/lesson'
 import { Module as ModuleModel } from '@/model/Module'
+import { textPreview } from '@/utils/text-preview'
 import { timeMask } from '@/utils/time-mask'
 import { useState } from 'react'
 import Lesson from './lesson'
@@ -22,35 +23,50 @@ export default function Module({
   const handleClick = () => setOpen((prev) => !prev)
 
   return (
-    <div
-      className={
-        'border-x border-t border-slate-400 pt-6 last:border-b hover:bg-gray-50 md:pb-6 ' +
-        (open && 'hover:bg-white md:pb-0')
-      }
-    >
-      <div className="cursor-pointer px-10" onClick={handleClick}>
+    <div className="border-x border-t border-slate-300 last:border-b hover:bg-gray-50 md:border-slate-400 ">
+      <div
+        className={
+          'cursor-pointer px-6 py-6 md:px-10 ' + (open && 'bg-green-600')
+        }
+        onClick={handleClick}
+      >
         <header className="mb-3 flex justify-between">
           <div className="flex items-center gap-3">
-            <h2 className="text-lg font-semibold">
+            <h2
+              className={
+                'text-base font-semibold md:text-lg ' + (open && 'text-white')
+              }
+            >
               {position}. {module.title}
             </h2>
-            <span className="hidden text-gray-500 md:block">
+            <span
+              className={
+                'hidden text-gray-500 md:block ' + (open && 'text-gray-300')
+              }
+            >
               {timeMask(module.duration || 0)}
             </span>
           </div>
-          <div className={open ? 'rotate-180' : 'rotate-0'}>
-            <DownIcon />
+          <div
+            className={'flex items-start ' + (open && 'rotate-180 items-end')}
+          >
+            <DownIcon className={'h-6 w-6 ' + (open && 'text-white')} />
           </div>
         </header>
-        <p className="text-gray-600">{module.description}</p>
+        <p
+          className={
+            'text-sm text-gray-600 md:text-base ' + (open && 'text-gray-100')
+          }
+        >
+          {textPreview(module.description, window.innerWidth, open)}
+        </p>
       </div>
       {open && (
-        <div className="mt-6">
-          {module.lessons.map((lesson, index) => (
+        <div>
+          {module.lessons.map((lesson) => (
             <Lesson
               key={lesson.id}
               lesson={lesson}
-              position={index + 1}
               handleSelection={handleSelection}
             />
           ))}

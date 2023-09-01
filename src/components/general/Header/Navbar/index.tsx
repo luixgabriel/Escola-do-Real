@@ -56,11 +56,11 @@ export default function Navbar({ isRoot }: { isRoot: boolean }) {
               </li>
             ))}
           </ul>
-          <div className="mt-5 flex justify-between md:hidden">
-            <button className="rounded-md bg-blue-500 px-5 py-3 uppercase text-white hover:bg-blue-700">
+          <div className="mt-5 flex justify-between gap-4 md:hidden">
+            <button className="rounded-md bg-blue-500 px-5 py-4 text-xs uppercase text-white hover:bg-blue-700">
               Fazer Doação
             </button>
-            <button className="rounded-md bg-green-500 px-5 py-3 uppercase text-white hover:bg-green-600">
+            <button className="rounded-md bg-green-500 px-5 py-4 text-xs uppercase text-white hover:bg-green-600">
               Faça Parte
             </button>
           </div>
