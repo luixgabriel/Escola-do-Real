@@ -36,7 +36,7 @@ export default function Navbar({ isRoot }: { isRoot: boolean }) {
     <nav className="custom-mx-global flex flex-col pb-6">
       {isRoot ? (
         <>
-          <ul className="flex flex-col items-center justify-center gap-6 border-b-2 border-green-500 py-6 text-base font-bold md:flex-row md:justify-between">
+          <ul className="flex flex-col items-center justify-center gap-6 border-b-2 border-green-500 py-6 text-base font-bold lg:flex-row lg:justify-between">
             {data.map((item) => (
               <li key={item.href}>
                 <Link
@@ -56,7 +56,7 @@ export default function Navbar({ isRoot }: { isRoot: boolean }) {
               </li>
             ))}
           </ul>
-          <div className="mt-5 flex justify-between gap-4 md:hidden">
+          <div className="mt-5 flex justify-between gap-4 lg:hidden">
             <button className="rounded-md bg-blue-500 px-5 py-4 text-xs uppercase text-white hover:bg-blue-700">
               Fazer Doação
             </button>

@@ -1,5 +1,6 @@
-import { CloseIcon } from '@/components/general/Icons'
+import { ClockIcon, CloseIcon } from '@/components/general/Icons'
 import { ILesson } from '@/interfaces/lesson'
+import { timeMask } from '@/utils/time-mask'
 
 interface ModalProps {
   selectedLesson: ILesson | null
@@ -12,7 +13,7 @@ export default function Modal({
 }: ModalProps) {
   return (
     <div className="fixed bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-black/40">
-      <div className="w-3/5 rounded-xl bg-white px-10 py-6">
+      <div className="w-4/5 rounded-xl bg-white px-10 py-6 lg:w-3/5">
         <div className="mb-4 flex justify-between">
           <h3 className="text-lg font-semibold">{selectedLesson?.title}</h3>{' '}
           <div className="cursor-pointer" onClick={handleCloseSelection}>
@@ -30,7 +31,13 @@ export default function Modal({
             allowFullScreen
           ></iframe>
         </div>
-        <p>{selectedLesson?.description}</p>
+        <div>
+          <span className="flex gap-2 text-gray-500">
+            <ClockIcon />
+            {timeMask(selectedLesson?.duration || 0)}
+          </span>
+          <p className="mt-3">{selectedLesson?.description}</p>
+        </div>
       </div>
     </div>
   )

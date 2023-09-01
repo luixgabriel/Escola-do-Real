@@ -1,6 +1,7 @@
 'use client'
 
 import Navbar from '@/components/general/Header/Navbar'
+import { breakpoints } from '@/utils/breakpoints'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useLayoutEffect, useState } from 'react'
@@ -12,8 +13,10 @@ export default function Header() {
   const [open, setOpen] = useState<boolean>(false)
 
   useLayoutEffect(() => {
-    const mobileAndRoot = window.innerWidth < 768 && pathname === '/'
-    const desktopOrNotRoot = window.innerWidth >= 768 || pathname !== '/'
+    const mobileAndRoot =
+      window.innerWidth < breakpoints.TABLET && pathname === '/'
+    const desktopOrNotRoot =
+      window.innerWidth >= breakpoints.TABLET || pathname !== '/'
     if (mobileAndRoot) setOpen(false)
     if (desktopOrNotRoot) setOpen(true)
     pathname === '/' ? setIsRoot(true) : setIsRoot(false)
@@ -35,11 +38,11 @@ export default function Header() {
           />
         </a>
         {isRoot && (
-          <div className="block md:hidden" onClick={handleClick}>
+          <div className="block lg:hidden" onClick={handleClick}>
             {open ? <CloseIcon className="h-10 w-10" /> : <BurguerIcon />}
           </div>
         )}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <div className="flex gap-4">
             <button className="rounded-md bg-blue-500 px-5 py-3 text-sm uppercase text-white hover:bg-blue-700">
               Fazer Doação

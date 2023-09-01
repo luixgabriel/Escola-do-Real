@@ -66,7 +66,7 @@ export default async function Course({ params }: { params: { slug: string } }) {
 
       <section className="mb-24 mt-16 px-[20%]">
         <Title icon="/icons/hands.svg">Nossos Professores</Title>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
           {course.professors.map((professor) => (
             <Professor key={professor.id} professor={professor} />
           ))}
