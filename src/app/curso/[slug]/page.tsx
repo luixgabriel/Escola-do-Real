@@ -14,7 +14,9 @@ interface MetadataProps {
 }
 
 async function getCourseBySlug(slug: string) {
-  const response = await fetch(`${process.env.HYPERLINK}/api/cursos/${slug}`)
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_PATHNAME}/api/cursos/${slug}`,
+  )
   if (response.status !== 200) notFound()
   const { data } = await response.json()
   return data
