@@ -3,19 +3,19 @@ import { IModule } from '@/interfaces/module'
 export const modules: IModule[] = [
   {
     id: 1,
-    title: 'O Que é Economia',
+    title: 'Introdução a Educação Financeira',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis velit a auctor varius. Vestibulum imperdiet sodales posuere. Fusce eu enim sit amet nisi placerat commodo vel ut erat.',
     duration: 47,
-    lessons: [1, 2, 3, 4, 5, 6, 7],
+    lessons: [1, 2, 3, 4, 5],
   },
   {
     id: 2,
-    title: 'Tudo Sobre Finanças Pessoais',
+    title: 'Conceitos de Educação Financeira',
     description:
       'Nam a porttitor nulla, quis scelerisque ex. Quisque efficitur magna at nulla luctus faucibus. Donec iaculis neque ut orci congue maximus. Sed ultricies lorem vel blandit gravida. Quisque nibh libero, ullamcorper non leo et, tincidunt luctus orci.',
     duration: 213,
-    lessons: [8, 9, 10, 11, 12],
+    lessons: [6, 7, 8, 9],
   },
   {
     id: 3,

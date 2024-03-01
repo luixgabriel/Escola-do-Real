@@ -16,13 +16,13 @@ export default function Course() {
           loading="lazy"
           width="1030"
           height="645"
-          src="https://www.youtube.com/embed/LXb3EKWsInQ"
+          src="https://www.youtube.com/embed/C-m_0Hi52o0?si=MF9o-5P-ZKKHqIqf"
           title="YouTube video player"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
       </div>
-      <Link href="/curso/economia-basica">
+      <Link href="/curso/educacao-financeira">
         <Button>Iniciar Curso</Button>
       </Link>
     </section>

@@ -1,5 +1,4 @@
 'use client'
-
 import { ILesson } from '@/interfaces/lesson'
 import { Module as ModuleModel } from '@/model/Module'
 import { useState } from 'react'
@@ -15,11 +14,13 @@ export default function Modules({ modules }: ModulesProps) {
   const handleSelection = (lesson: ILesson) => setSelectedLesson(lesson)
   const handleCloseSelection = () => setSelectedLesson(null)
 
+  console.log(selectedLesson)
+
   return (
     <main className="md:custom-mx-global mx-6 py-10">
       {modules.map((module, index) => (
         <Module
-          key={module.id}
+          key={1}
           module={module}
           position={index + 1}
           handleSelection={handleSelection}

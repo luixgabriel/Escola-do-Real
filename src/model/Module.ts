@@ -1,6 +1,6 @@
 import { ILesson } from '@/interfaces/lesson'
 import { IModule } from '@/interfaces/module'
-import { lessons } from '../app/api/data/lessons'
+import { lessons } from '../app/data/lessons'
 
 export class Module {
   id: number
