@@ -1,9 +1,9 @@
 import { ICourse } from '@/interfaces/course'
 import { IModule } from '@/interfaces/module'
 import { IProfessor } from '@/interfaces/professor'
-import { modules } from '../app/api/data/modules'
-import { professors } from '../app/api/data/professors'
 import { Module } from './Module'
+import { professors } from '../app/data/professors'
+import { modules } from '../app/data/modules'
 
 export class Course {
   id: number

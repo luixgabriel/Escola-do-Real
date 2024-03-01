@@ -13,9 +13,9 @@ import { professors } from '../../data/professors'
 import { modules } from '../../data/modules'
 import { Module as ModuleModel } from '@/model/Module'
 
-interface MetadataProps {
-  params: { slug: string }
-}
+// interface MetadataProps {
+//   params: { slug: string }
+// }
 
 // async function getCourseBySlug(slug: string) {
 //   const response = await fetch(
