@@ -36,7 +36,7 @@ export default function Location() {
         Capacitação de Pessoas para um Futuro <br /> Financeiramente
         Sustentável!
       </h3>
-      <section className="mx-[13%] mt-12 flex justify-center gap-6">
+      <section className="mx-[13%] mt-12 flex flex-col items-center justify-center gap-6 md:flex-row">
         {data.map((item) => (
           <Card key={item.src} item={item} />
         ))}

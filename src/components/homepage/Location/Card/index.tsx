@@ -18,7 +18,7 @@ export default function Card({ item }: CardProps) {
       <h3 className="text-2xl font-semibold text-green-500 md:text-xl">
         {item.title}
       </h3>
-      <p className="text-sm text-gray-600 md:text-xs">{item.text}</p>
+      <p className="text-[12px] text-gray-600 md:text-xs">{item.text}</p>
     </div>
   )
 }
