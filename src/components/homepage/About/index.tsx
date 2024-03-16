@@ -5,21 +5,20 @@ export default function About() {
     <section className="custom-py-section custom-mx-global" id="escola-do-real">
       <Title icon="/icons/globe.svg">Conheça a Escola do Real</Title>
       <p>
-        A <strong>Escola do Real</strong> é uma instituição que busca educar os
-        brasileros financeiramente e desmistificar diversos esteriótipos sobre
-        dinheiro que permeiam nossa sociedade.
+        Mais do que uma simples instituição, a Escola do Real é um movimento que
+        busca eliminar as dívidas que afligem tantos brasileiros.
       </p>
       <p className="mt-3">
-        No Brasil, ensino religioso e química orgânica fazem parte do currículo
-        escolar obrigatório, mas as finanças básicas, por exemplo, não. Segundo
-        a Confederação Nacional do Comércio de Bens, Serviços e Turismo (CNC),
-        cerca de 80% das famílias brasileiras sofrem com endividamento. Foi
-        pensando nessas pessoas que criamos o projeto.
+        Nosso trabalho é fundamentado na desconstrução de mitos e na eliminação
+        de estereótipos financeiros enraizados na cultura brasileira. Vivemos em
+        um país onde disciplinas tradicionais são obrigatórias, enquanto a
+        educação básica sobre dinheiro, fundamental na vida de todos, é
+        negligenciada.
       </p>
       <p className="mt-3">
-        Nosso intuito é trabalhar o ensino financeiro de forma adaptada e
-        direcionada. Precisamos, assim, de apoio e de uma equipe diversificada
-        para darmos continuidade ao projeto.
+        Diante de uma realidade onde cerca de 80% das famílias brasileiras
+        sofrem com endividamento, a Escola do Real nasceu com o intuito de fazer
+        a diferença.
       </p>
       <p className="mt-3">
         Faça parte da organização e nos ajude nessa missão!

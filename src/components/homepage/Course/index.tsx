@@ -7,8 +7,10 @@ export default function Course() {
     <section id="nosso-curso" className="custom-py-section">
       <Title icon="/icons/study.svg">Nosso Curso</Title>
       <p className="mb-5 px-10 text-center">
-        Apresentação do nosso projeto e como funciona o projeto social de
-        educação financeira.
+        O nosso curso é abrangente, orientado e completamente gratuito. Com uma
+        abordagem prática, permitimos que você ponha em prática os ensinamentos
+        adquiridos no seu dia a dia e desenvolva suas habilidades de gestão
+        financeira.
       </p>
       <div className="md:custom-pt-iframe md:custom-mx-global relative mb-7 flex h-[14.5rem] w-full justify-center md:w-4/5 ">
         <iframe

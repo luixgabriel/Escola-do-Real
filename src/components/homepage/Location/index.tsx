@@ -5,26 +5,26 @@ const data = [
   {
     src: '/icons/globe.svg',
     alt: 'globe icon',
-    title: 'Estrutura',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+    title: 'Missão',
+    text: 'Seja por meio de aulas em escolas, cursos gratuitos e projetos diversos, buscamos democratizar a educação financeira, especialmente entre os jovens, para impactar o futuro de nosso país e tornar o ensino cada vez mais acessível.',
   },
   {
     src: '/icons/hands.svg',
     alt: 'hands icon',
-    title: 'Estrutura',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+    title: 'Conexão',
+    text: 'Acreditamos que a educação financeira é um direito fundamental. É por isso que estamos comprometidos em conectar o conhecimento econômico com cidadãos brasileiros e instituições de ensino, ajudando a construir um futuro financeiramente mais seguro para todos.',
   },
-  {
-    src: '/icons/location.svg',
-    alt: 'location icon',
-    title: 'Estrutura',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
-  },
+  // {
+  //   src: '/icons/location.svg',
+  //   alt: 'location icon',
+  //   title: 'Estrutura',
+  //   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+  // },
   {
     src: '/icons/talk.svg',
     alt: 'talk icon',
-    title: 'Estrutura',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+    title: 'Educação',
+    text: 'Através da simplificação de conceitos econômicos, promovemos um aprendizado contínuo e acessível, capacitando indivíduos de todas as profissões, idades e condições socioeconômicas a alcançarem saúde financeira plena.',
   },
 ]
 
@@ -36,7 +36,7 @@ export default function Location() {
         Capacitação de Pessoas para um Futuro <br /> Financeiramente
         Sustentável!
       </h3>
-      <section className="mx-[13%] -mt-12 grid grid-cols-1 place-items-center gap-4 md:grid-cols-2 lg:grid-cols-4 ">
+      <section className="mx-[13%] mt-12 flex justify-center gap-6">
         {data.map((item) => (
           <Card key={item.src} item={item} />
         ))}

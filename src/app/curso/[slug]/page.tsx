@@ -2,42 +2,12 @@ import Modules from '@/components/course/modules'
 import Professor from '@/components/course/professor'
 import { ClockIcon, VideoIcon } from '@/components/general/Icons'
 import Title from '@/components/general/Title'
-import { ICourse } from '@/interfaces/course'
-import { Course as CourseModel } from '@/model/Course'
 import { timeMask } from '@/utils/time-mask'
-import { Metadata } from 'next'
 import Image from 'next/image'
-import { notFound } from 'next/navigation'
 import { courses } from '../../data/courses'
 import { professors } from '../../data/professors'
 import { modules } from '../../data/modules'
 import { Module as ModuleModel } from '@/model/Module'
-
-// interface MetadataProps {
-//   params: { slug: string }
-// }
-
-// async function getCourseBySlug(slug: string) {
-//   const response = await fetch(
-//     `${process.env.NEXT_PUBLIC_PATHNAME}/api/cursos/${slug}`,
-//     {
-//       mode: 'cors',
-//       headers: { origin: process.env.NEXT_PUBLIC_PATHNAME || '' },
-//     },
-//   )
-//   if (response.status !== 200) notFound()
-//   const { data } = await response.json()
-//   return data
-// }
-
-// export async function generateMetadata({ params }: MetadataProps) {
-//   const course: ICourse = await getCourseBySlug(params.slug)
-//   const metadata: Metadata = {
-//     title: `Curso - ${course.name}`,
-//     description: course.about,
-//   }
-//   return metadata
-// }
 
 export default async function Course({ params }: { params: { slug: string } }) {
   // const course: CourseModel = await getCourseBySlug(params.slug)

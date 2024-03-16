@@ -7,7 +7,7 @@ export const courses: ICourse[] = [
     name: 'Educação financeira',
     banner: '/images/course/1-banner.png',
     about:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis velit a auctor varius. Vestibulum imperdiet sodales posuere. Fusce eu enim sit amet nisi placerat commodo vel ut erat. Nam a porttitor nulla, quis scelerisque ex. Quisque efficitur magna at nulla luctus faucibus. Donec iaculis neque ut orci congue maximus. Sed ultricies lorem vel blandit gravida. Quisque nibh libero, ullamcorper non leo et, tincidunt luctus orci. Sed pellentesque a metus aliquam ultrices. Praesent egestas, ipsum vitae laoreet vestibulum, lorem justo iaculis libero, et feugiat neque augue id nunc. In hac habitasse platea dictumst. Donec tempus convallis semper. Morbi efficitur, est vitae venenatis consectetur, nunc sapien hendrerit arcu, sed vulputate ante lectus a nulla. Etiam sit amet finibus dolor, vitae varius ligula.',
+      'O Curso Escola do Real oferece uma oportunidade única de aprimoramento em educação financeira e economia, totalmente online e gratuito. Destinado a iniciantes e intermediários, o curso abrange desde planejamento financeiro e economia doméstica até tópicos avançados como investimentos em renda fixa e variável, macro e microeconomia, e criptomoedas. Com 8 módulos liberados aos pares e mais de 50 aulas, este curso é ideal para quem deseja melhorar sua saúde financeira e tomar decisões econômicas mais informadas. Faça parte e transforme a sua vida com conhecimento financeiro!',
     lessons: 5,
     duration: 1298,
     professors: [1, 2, 3, 4],
