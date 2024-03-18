@@ -49,14 +49,17 @@ export default function Message() {
     console.log(state)
     setSending(true)
     try {
-      const result = await fetch(`http://localhost:3000/api/mensagem`, {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Content-Type': 'application/json',
+      const result = await fetch(
+        `https://escola-do-real-nine.vercel.app/api/mensagem`,
+        {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ ...state }),
         },
-        body: JSON.stringify({ ...state }),
-      })
+      )
       console.log(result)
       if (result.status === 201) {
         setState(cleanState)
