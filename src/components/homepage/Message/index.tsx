@@ -1,7 +1,6 @@
 'use client'
 
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
-import ReCAPTCHA from 'react-google-recaptcha'
 import Title from '../../general/Title'
 import Button from '../Button'
 import Toast from './Toast'
@@ -22,20 +21,12 @@ const cleanState: contactForm = {
 
 export default function Message() {
   const [state, setState] = useState<contactForm>(cleanState)
-  const [captchaToken, setCaptchaToken] = useState<string | null>('')
-  const [formIsComplete, setFormIsComplete] = useState<boolean>(false)
   const [sending, setSending] = useState<boolean>(false)
   const [toast, setToast] = useState({
     message: '',
     status: false,
     visible: false,
   })
-
-  useEffect(() => {
-    if (state.email && state.title && state.name && state.message)
-      setFormIsComplete(true)
-    else setFormIsComplete(false)
-  }, [state])
 
   useEffect(() => {
     setTimeout(() => {
@@ -53,27 +44,20 @@ export default function Message() {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
-  function handleCaptcha(token: string | null) {
-    setCaptchaToken(token)
-  }
-
   const handleSubmit = async (e: FormEvent<HTMLElement>) => {
     e.preventDefault()
+    console.log(state)
     setSending(true)
     try {
-      const result = await fetch(
-        `${process.env.NEXT_PUBLIC_PATHNAME}/api/mensagem`,
-        {
-          mode: 'cors',
-          method: 'POST',
-          headers: {
-            origin: process.env.NEXT_PUBLIC_PATHNAME || '',
-            Accept: 'application/json, text/plain, */*',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ ...state, token: captchaToken }),
+      const result = await fetch(`http://localhost:3000/api/mensagem`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
         },
-      )
+        body: JSON.stringify({ ...state }),
+      })
+      console.log(result)
       if (result.status === 201) {
         setState(cleanState)
         setToast({
@@ -168,12 +152,6 @@ export default function Message() {
             required
           ></textarea>
         </label>
-        {formIsComplete && (
-          <ReCAPTCHA
-            sitekey={process.env.NEXT_PUBLIC_CAPTCHA_CHAVE_PUBLICA || ''}
-            onChange={handleCaptcha}
-          />
-        )}
         <div className="col-span-2 my-3">
           <Button>{sending ? 'Enviando...' : 'Enviar Mensagem!'}</Button>
         </div>

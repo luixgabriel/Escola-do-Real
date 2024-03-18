@@ -32,7 +32,7 @@ export default function Lesson({ lesson, handleSelection }: LessonProps) {
         />
         <PlayIcon />
       </div>
-      <div>
+      <div className="flex">
         <div className="flex items-center gap-3">
           <h3 className="text-center text-lg font-medium md:text-left">
             {lesson?.title}
@@ -41,7 +41,7 @@ export default function Lesson({ lesson, handleSelection }: LessonProps) {
             {timeMask(lesson?.duration || 0)}
           </span>
         </div>
-        <p className="hidden text-gray-600 md:block">{lesson?.description}</p>
+        {/* <p className="hidden text-gray-600 md:block">{lesson?.description}</p> */}
       </div>
     </div>
   )
