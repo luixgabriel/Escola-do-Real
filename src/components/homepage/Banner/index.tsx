@@ -14,7 +14,8 @@ export default function Banner() {
         eficaz sobre gestão de dinheiro.
       </p>
       <Link
-        href={'/curso/economia-basica'}
+        href="https://forms.gle/WcUNcAGHkEoV7duy5"
+        target="_blank"
         className="font-md inline rounded-full bg-white px-8 py-4 text-base uppercase text-green-500 hover:bg-gray-100 md:text-lg"
       >
         Junte-se a nós!

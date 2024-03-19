@@ -5,7 +5,7 @@ export const lessons: ILesson[] = [
     id: 1,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'A Educação Financeira e sua Importância',
-    description: 'Lorem ipsum...',
+
     duration: 12,
     url: 'C-m_0Hi52o0?si=_TuPu2c3cjNmw9s1',
   },
@@ -13,7 +13,7 @@ export const lessons: ILesson[] = [
     id: 2,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'O Que é Dinheiro?',
-    description: 'Lorem ipsum...',
+
     duration: 12,
     url: 'ScsTC3eqvbA?si=WsMPXqulgM_NCw-U',
   },
@@ -21,7 +21,7 @@ export const lessons: ILesson[] = [
     id: 3,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Passivos e Ativos',
-    description: 'Lorem ipsum...',
+
     duration: 12,
     url: 'pVyZCU2i9Mo?si=ZyLKHyZHNuSKkuMp',
   },
@@ -29,7 +29,7 @@ export const lessons: ILesson[] = [
     id: 4,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Custo de Oportunidade',
-    description: 'Lorem ipsum...',
+
     duration: 12,
     url: 'm58gAYX7lUA?si=WGR-ozZUC-GhMBJF',
   },
@@ -37,7 +37,7 @@ export const lessons: ILesson[] = [
     id: 5,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Planejamento Financeiro',
-    description: 'Lorem ipsum...',
+
     duration: 12,
     url: '3KUlEuV7ClI?si=jHlfEoFnykA3bsEl',
   },
@@ -45,7 +45,7 @@ export const lessons: ILesson[] = [
     id: 6,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Os Bancos',
-    description: 'Lorem ipsum...',
+
     duration: 12,
     url: 'C_ZfSe1H0cE?si=WEBvj441087ZdEe5',
   },
@@ -53,7 +53,7 @@ export const lessons: ILesson[] = [
     id: 7,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Cartões de Crédito e Débito',
-    description: 'Lorem ipsum...',
+
     duration: 12,
     url: '2kUxjVqP8Nk?si=WIQE9cg4FzqACDnj',
   },
@@ -61,7 +61,7 @@ export const lessons: ILesson[] = [
     id: 8,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Empréstimos e Financiamentos',
-    description: 'Lorem ipsum...',
+
     duration: 12,
     url: '3F4olWPTdhU?si=rX5PZSVTY0oNpmq7',
   },
@@ -69,7 +69,7 @@ export const lessons: ILesson[] = [
     id: 9,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Investimentos e Seguros',
-    description: 'Lorem ipsum...',
+
     duration: 12,
     url: 'NgdG9lDcytg?si=yzpFLNuX3GVdz-yC',
   },
@@ -77,7 +77,7 @@ export const lessons: ILesson[] = [
   //   id: 10,
   //   thumb: '/images/lesson/1-lesson.jpg',
   //   title: 'Entendendo o que é a economia',
-  //   description: 'Lorem ipsum...',
+  //
   //   duration: 12,
   //   url: 'SiIztrwfg1s',
   // },
@@ -85,7 +85,7 @@ export const lessons: ILesson[] = [
   //   id: 11,
   //   thumb: '/images/lesson/1-lesson.jpg',
   //   title: 'Entendendo o que é a economia',
-  //   description: 'Lorem ipsum...',
+  //
   //   duration: 12,
   //   url: 'SiIztrwfg1s',
   // },

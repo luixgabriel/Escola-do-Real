@@ -5,7 +5,7 @@ export const modules: IModule[] = [
     id: 1,
     title: 'Introdução a Educação Financeira',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis velit a auctor varius. Vestibulum imperdiet sodales posuere. Fusce eu enim sit amet nisi placerat commodo vel ut erat.',
+      'Na primeira unidade de nosso curso, você será guiado pelos primeiros passos no mundo das finanças pessoais, conhecendo a importância do estudo de educação financeira e aprendendo a gerenciar seu dinheiro de forma mais eficaz.',
     duration: 47,
     lessons: [1, 2, 3, 4, 5],
   },
@@ -13,7 +13,7 @@ export const modules: IModule[] = [
     id: 2,
     title: 'Conceitos de Educação Financeira',
     description:
-      'Nam a porttitor nulla, quis scelerisque ex. Quisque efficitur magna at nulla luctus faucibus. Donec iaculis neque ut orci congue maximus. Sed ultricies lorem vel blandit gravida. Quisque nibh libero, ullamcorper non leo et, tincidunt luctus orci.',
+      'Nesse módulo, iremos abordar  alguns conceitos iniciais imprescindíveis para você aprimorar seus conhecimentos sobre gestão financeira pessoal e entender mais a respeito do funcionamento da economia.',
     duration: 213,
     lessons: [6, 7, 8, 9],
   },

@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useLayoutEffect, useState } from 'react'
 import { BurguerIcon, CloseIcon } from '../Icons'
+import Link from 'next/link'
 
 export default function Header() {
   const pathname = usePathname()
@@ -49,7 +50,9 @@ export default function Header() {
               Fazer Doação
             </button>
             <button className="rounded-md bg-green-600 px-5 py-3 text-sm uppercase text-white hover:bg-green-700">
-              Faça Parte
+              <Link href="https://forms.gle/WcUNcAGHkEoV7duy5" target="_blank">
+                Faça Parte
+              </Link>
             </button>
           </div>
         </div>
