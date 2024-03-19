@@ -46,7 +46,6 @@ export default function Modal({
             <ClockIcon />
             {timeMask(selectedLesson?.duration || 0)}
           </span>
-          <p className="mt-3">{selectedLesson?.description}</p>
         </div>
       </div>
     </div>
