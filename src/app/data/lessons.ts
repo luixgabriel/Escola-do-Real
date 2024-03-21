@@ -5,72 +5,63 @@ export const lessons: ILesson[] = [
     id: 1,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'A Educação Financeira e sua Importância',
-
-    duration: 12,
+    duration: 9,
     url: 'C-m_0Hi52o0?si=_TuPu2c3cjNmw9s1',
   },
   {
     id: 2,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'O Que é Dinheiro?',
-
-    duration: 12,
+    duration: 9,
     url: 'ScsTC3eqvbA?si=WsMPXqulgM_NCw-U',
   },
   {
     id: 3,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Passivos e Ativos',
-
-    duration: 12,
+    duration: 5,
     url: 'pVyZCU2i9Mo?si=ZyLKHyZHNuSKkuMp',
   },
   {
     id: 4,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Custo de Oportunidade',
-
-    duration: 12,
+    duration: 9,
     url: 'm58gAYX7lUA?si=WGR-ozZUC-GhMBJF',
   },
   {
     id: 5,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Planejamento Financeiro',
-
-    duration: 12,
+    duration: 9,
     url: '3KUlEuV7ClI?si=jHlfEoFnykA3bsEl',
   },
   {
     id: 6,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Os Bancos',
-
-    duration: 12,
+    duration: 14,
     url: 'C_ZfSe1H0cE?si=WEBvj441087ZdEe5',
   },
   {
     id: 7,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Cartões de Crédito e Débito',
-
-    duration: 12,
+    duration: 9,
     url: '2kUxjVqP8Nk?si=WIQE9cg4FzqACDnj',
   },
   {
     id: 8,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Empréstimos e Financiamentos',
-
-    duration: 12,
+    duration: 18,
     url: '3F4olWPTdhU?si=rX5PZSVTY0oNpmq7',
   },
   {
     id: 9,
     thumb: '/images/lesson/1-lesson.jpg',
     title: 'Investimentos e Seguros',
-
-    duration: 12,
+    duration: 7,
     url: 'NgdG9lDcytg?si=yzpFLNuX3GVdz-yC',
   },
   // {

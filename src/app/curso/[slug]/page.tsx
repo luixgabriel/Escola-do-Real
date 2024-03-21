@@ -9,13 +9,11 @@ import { professors } from '../../data/professors'
 import { modules } from '../../data/modules'
 import { Module as ModuleModel } from '@/model/Module'
 
-export default async function Course({ params }: { params: { slug: string } }) {
-  // const course: CourseModel = await getCourseBySlug(params.slug)
-  const moudulesCreate = new ModuleModel(modules[0])
-  const moudulesCreate1 = new ModuleModel(modules[1])
-  const moudulesCreate2 = new ModuleModel(modules[2])
+export default async function Course() {
+  const modulesCreate = new ModuleModel(modules[0])
+  const modulesCreate1 = new ModuleModel(modules[1])
 
-  const modulesArray = [moudulesCreate, moudulesCreate1, moudulesCreate2]
+  const modulesArray = [modulesCreate, modulesCreate1]
   return (
     <>
       <div>

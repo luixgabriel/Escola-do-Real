@@ -6,30 +6,13 @@ export default function Footer() {
     <footer className="mt-20 bg-gradient-to-r from-green-500 to-blue-500 px-10 py-12">
       <div className="flex justify-center gap-4">
         <Link href="https://www.instagram.com/escoladoreal/">
+          oi
           <Image
             className="h-8 w-auto"
             width={29}
             height={29}
             src="/icons/instagram.svg"
             alt="logo do Instagram"
-          />
-        </Link>
-        <Link href="#">
-          <Image
-            className="h-8 w-auto"
-            width={29}
-            height={29}
-            src="/icons/linkedin.svg"
-            alt="logo do Linkedin"
-          />
-        </Link>
-        <Link href="#">
-          <Image
-            className="h-8 w-auto"
-            width={29}
-            height={29}
-            src="/icons/facebook.svg"
-            alt="logo do Facebook"
           />
         </Link>
       </div>
