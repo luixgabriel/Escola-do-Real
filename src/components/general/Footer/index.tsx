@@ -4,9 +4,8 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="mt-20 bg-gradient-to-r from-green-500 to-blue-500 px-10 py-12">
-      <div className="flex justify-center gap-4">
+      <div className="flex items-center justify-center gap-4">
         <Link href="https://www.instagram.com/escoladoreal/">
-          oi
           <Image
             className="h-8 w-auto"
             width={29}
@@ -15,6 +14,7 @@ export default function Footer() {
             alt="logo do Instagram"
           />
         </Link>
+        <p className="text-green-500">Nos acompanhe pelo instagram!</p>
       </div>
       <small className="my-3 block text-center text-sm text-white md:text-base">
         &copy; 2023 - Escola do Real - Todos os direitos reservados

@@ -14,12 +14,6 @@ const data = [
     title: 'Conexão',
     text: 'Acreditamos que a educação financeira é um direito fundamental. É por isso que estamos comprometidos em conectar o conhecimento econômico com cidadãos brasileiros e instituições de ensino, ajudando a construir um futuro financeiramente mais seguro para todos.',
   },
-  // {
-  //   src: '/icons/location.svg',
-  //   alt: 'location icon',
-  //   title: 'Estrutura',
-  //   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
-  // },
   {
     src: '/icons/talk.svg',
     alt: 'talk icon',
@@ -36,7 +30,7 @@ export default function Location() {
         Capacitação de Pessoas para um Futuro <br /> Financeiramente
         Sustentável!
       </h3>
-      <section className="mx-[13%] mt-12 flex flex-col items-center justify-center gap-6 md:flex-row">
+      <section className="mx-[13%] mt-12 flex flex-col items-center justify-center gap-7 lg:flex-row">
         {data.map((item) => (
           <Card key={item.src} item={item} />
         ))}
