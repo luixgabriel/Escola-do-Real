@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="mt-20 bg-gradient-to-r from-green-500 to-blue-500 px-10 py-12">
       <div className="flex items-center justify-center gap-4">
-        <Link href="https://www.instagram.com/escoladoreal/">
+        <Link href="https://www.instagram.com/escoladoreal/" target="_blank">
           <Image
             className="h-8 w-auto"
             width={29}
