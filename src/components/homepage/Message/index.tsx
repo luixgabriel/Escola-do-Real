@@ -48,14 +48,17 @@ export default function Message() {
     e.preventDefault()
     setSending(true)
     try {
-      const result = await fetch(`https://escola-do-real.vercel.app`, {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Content-Type': 'application/json',
+      const result = await fetch(
+        `https://escola-do-real.vercel.app/api/mensagem`,
+        {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ ...state }),
         },
-        body: JSON.stringify({ ...state }),
-      })
+      )
       console.log(result)
       if (result.status === 201) {
         setState(cleanState)
