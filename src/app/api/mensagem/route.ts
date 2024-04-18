@@ -19,7 +19,6 @@ export async function POST(request: NextRequest) {
   const { name, title, email, message } = await request.json()
 
   if (!name || !title || !email || !message) {
-    console.log('oi')
     return NextResponse.json(
       { erro: 'O conteúdo do body não foi passado de forma apropriada' },
       { status: 400 },

@@ -13,7 +13,7 @@ export default function Home() {
       <Location />
       <Course />
       <Message />
-      <Partners />
+      {/* <Partners /> */}
     </>
   )
 }

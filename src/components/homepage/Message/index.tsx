@@ -46,20 +46,16 @@ export default function Message() {
 
   const handleSubmit = async (e: FormEvent<HTMLElement>) => {
     e.preventDefault()
-    console.log(state)
     setSending(true)
     try {
-      const result = await fetch(
-        `https://escola-do-real-nine.vercel.app/api/mensagem`,
-        {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json, text/plain, */*',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ ...state }),
+      const result = await fetch(`https://escola-do-real.vercel.app`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
         },
-      )
+        body: JSON.stringify({ ...state }),
+      })
       console.log(result)
       if (result.status === 201) {
         setState(cleanState)
