@@ -62,9 +62,9 @@ export default function Navbar({ isRoot }: NavbarProps) {
             <button className="rounded-md bg-blue-500 px-5 py-4 text-xs uppercase text-white hover:bg-blue-700">
               Fazer Doação
             </button>
-            <button className="rounded-md bg-green-600 px-5 py-4 text-xs uppercase text-white hover:bg-green-700">
+            <Link href="https://forms.gle/WcUNcAGHkEoV7duy5" target="_blank">
               Faça Parte
-            </button>
+            </Link>
           </div>
         </>
       ) : (
