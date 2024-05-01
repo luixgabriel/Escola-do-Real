@@ -49,7 +49,7 @@ export default function Message() {
     setSending(true)
     try {
       const result = await fetch(
-        `https://escola-do-real.vercel.app/api/mensagem`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/mensagem`,
         {
           method: 'POST',
           headers: {

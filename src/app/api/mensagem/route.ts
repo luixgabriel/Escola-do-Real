@@ -17,7 +17,7 @@ const htmlEmailTemplate = (
 
 export async function POST(request: NextRequest) {
   const { name, title, email, message } = await request.json()
-
+  console.log(email)
   if (!name || !title || !email || !message) {
     return NextResponse.json(
       { erro: 'O conteúdo do body não foi passado de forma apropriada' },
@@ -39,19 +39,19 @@ export async function POST(request: NextRequest) {
     port: 587,
     secure: false,
     auth: {
-      user: 'veterinariobackend@gmail.com',
-      pass: 'khnnbgeapzjkbcce',
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASSWORD,
+      // pass: 'khnnbgeapzjkbcce',
     },
   })
 
   try {
-    const result = await transporter.sendMail({
-      from: 'veterinariobackend@gmail.com',
-      to: 'luis16757@gmail.com',
+    await transporter.sendMail({
+      from: email,
+      to: process.env.EMAIL,
       subject: title,
       html: htmlEmailTemplate(name, title, email, message),
     })
-    console.log(result)
     return NextResponse.json({ name, title, email, message }, { status: 201 })
   } catch (error) {
     return NextResponse.json(error, { status: 500 })
